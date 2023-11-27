@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <title>
+    Postfix Expressions
+  </title>
+</head>
+
+<body>
+  <h1>Hello World! Weclcome to Postfix Life</h1>
+  <script>
+    function evaluatePostFix(numbers) {
+      const stack = []
+      for (let i = 0; i < numbers.length; i++) {
+        if (!isNaN(numbers[i])) {
+          stack.push(numbers[i])
+        } else {
+          const operator = numbers[i]
+          const num1 = stack.pop()
+          const num2 = stack.pop()
+          const result = operate(num1, num2, operator)
+          stack.push(result)
+        }
+      }
+      if (stack.length != 1) {
+        throw new Error('This is not a valid expression')
+      }
+      return stack.pop()
+    }
+    function operate(num1, num2, operator) {
+      num1 = +num1
+      num2 = +num2
+      switch (operator) {
+        case '+': return num2 + num1;
+        case '-': return num2 - num1;
+        case '/': return num2 / num1;
+        case '*': return num2 * num1;
+        default: throw new Error('Error')
+      }
+    }
+    const expression = prompt('Enter the expression:');
+    const expressionArray = expression.split(' ')
+    const result = evaluatePostFix(expressionArray)
+    console.log(result)
+  </script>
+</body>
+
+</html>

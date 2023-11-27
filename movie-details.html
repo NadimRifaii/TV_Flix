@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tvflix</title>
+  <!-- titleIcon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./CSS/framework.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <!-- JS Files -->
+  <script src="./JS/global.js" defer ></script>
+  <script src="./JS/details.js" defer type="module" ></script>
+</head>
+<body>
+  <!-- Header Starts -->
+  <header class="header between-flex p-relative gap-10">
+    <a href="index.html" class="logo">
+      <img src="./images/logo.svg" alt="">
+    </a>
+    <div class="search-box between-flex gap-10">
+      <div class="search-wrapper p-relative">
+        <img src="./images/search.png" class="search-icon x24" alt="">
+        <input type="text" name="" placeholder="Search any movie..." id="" class="search-input">
+      </div>
+      <button class="close-btn d-flex">
+        <img src="./images/close.png"  class="x24 " alt="">
+      </button>
+    </div>
+    <button class="search-btn">
+      <img src="./images/search.png" class="x24" alt="">
+    </button>
+    <button class="menu-togglers center-flex">
+      <img class="x24 active" src="./images/menu.png" alt="">
+      <img class="x24" src="./images/menu-close.png"  alt="">
+    </div>
+  </header>
+  <!-- Header Ends -->
+  <!-- Sidebar starts -->
+  <div class="sidebar p-20">
+    <div class="list genre">
+      <p class="fw-bold c-white mb-10">Genre</p>
+      <ul>
+      </ul>
+    </div>
+    <div class="list languages">
+      <p class="fw-bold c-white mb-10">Languages</p>
+      <ul>
+        <li><a href="" data-language="en" >English</a></li>
+        <li><a href="" data-language="ar" >Arabic</a></li>
+        <li><a href="" data-language="fr" >French</a></li>
+        <li><a href="" data-language="hi" >Hindi</a></li>
+        <li><a href="" data-language="ja" >Japanese</a></li>
+        <li><a href="" data-language="ko" >Korean</a></li>
+      </ul>
+    </div>
+    <div class="list footer txt-c">
+      <p class="mb-10" >Made with &lt;3, By Nadim</p>
+      <img class="d-block" src="./images/tmdb-logo.svg" alt="">
+    </div>
+  </div>
+  <div class="overlay"></div>
+  <!-- Sidebar ends -->
+  <!-- Page content starts -->
+  <div class="page-content p-relative p-20">
+    <div class="movie-details">
+      <div class="info between-flex dir-mobile gap-20">
+      
+      </div>
+      <div class="yt-videos d-flex gap-10 mt-25">
+      </div>
+      </div>
+    <section class="page-sections mt-10">
+    </section>
+  </div>
+  <!-- Page content ends -->
+</body>
+</html>

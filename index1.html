@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .word {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            font-size: 1.5rem;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="word">apple</div>
+        <input type="text" id="user-input" autofocus>
+    </div>
+    <script>
+        const wordElement = document.querySelector('.word');
+        const userInput = document.getElementById('user-input');
+
+        const words = ['apple', 'banana', 'grape', 'orange', 'kiwi', 'strawberry', 'mango'];
+        let currentWord = '';
+
+        function getRandomWord() {
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+        function updateWord() {
+            currentWord = getRandomWord();
+            wordElement.textContent = currentWord;
+        }
+
+        userInput.addEventListener('input', () => {
+            if (userInput.value.toLowerCase() === currentWord) {
+                updateWord();
+                userInput.value = '';
+            }
+        });
+
+        updateWord();
+    </script>
+</body>
+</html>
